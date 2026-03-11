@@ -1,5 +1,95 @@
-.navbar{
-    font-style: bold;
-    padding-top: 40px;
-    padding-bottom: 40px;
+body {
+    background: linear-gradient(135deg,#f8f9fa,#eef2f7);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Headings */
+h1, h2, h4, h5 {
+    font-weight: 700;
+    color: #343a40;
+}
+
+p {
+    font-size: 1.05rem;
+    color: #555;
+}
+
+/* Page transitions */
+.page {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(10px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Tables */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    font-weight: 600;
+}
+
+/* Forms */
+.form-control, .form-select {
+    border-radius: 6px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.15rem rgba(13,110,253,0.25);
+}
+
+/* Toast */
+.toast {
+    border-radius: 8px;
+}
+
+/* Authentication states */
+body.not-authenticated .role-logged-in {
+    display: none;
+}
+
+body.authenticated .role-logged-out {
+    display: none;
+}
+
+/* Admin role */
+.role-admin {
+    display: none;
+}
+
+body.is-admin .role-admin {
+    display: block;
 }
